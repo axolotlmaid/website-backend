@@ -60,7 +60,7 @@ func HandleComputerWebSocket(w http.ResponseWriter, r *http.Request) {
 	service.ComputerData.Online = true
 
 	// If computer has not been seen in the last 45s, start new session
-	if time.Since(lastSeen) > 45*time.Second {
+	if time.Since(lastSeen) > 45*time.Second || service.ComputerData.UptimeStart == -1 {
 		service.ComputerData.UptimeStart = int(time.Now().Unix())
 	} else {
 		slog.Info("Continuing existing uptime session")
