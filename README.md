@@ -11,7 +11,7 @@ trafficlunar's api
 - hit counter
   - Tracks the amount of visits my website has recieved
 - computer statistics websocket
-  - The application [here](https://github.com/trafficlunar/computer) is used to send data to this WebSocket
+  - The application [here](https://github.com/trafficlunar/computer-statistics) is used to send data to this WebSocket
   - After the data is sent, it is turned into chart data and is displayed on my website.
 - github
   - Gets amount of stars for my repositories
